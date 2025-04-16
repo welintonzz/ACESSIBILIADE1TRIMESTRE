@@ -15,24 +15,11 @@
         body {
             font-family: 'Black Han Sans', sans-serif;
             color: #000000;
-            background-color: #ffffff; /* fundo geral branco */
         }
 
-        /* Forçar textos principais (títulos) para preto */
-        h2 {
-            color: #000000 !important;
-        }
-
-        /* Forçar links para preto */
+        /* Links e textos que estavam em laranja agora pretos */
         .nav-link {
             color: #000000 !important;
-        }
-
-        /* Fundo branco para as seções que podem ter vindo laranja */
-        #tropicalia,
-        #galeria,
-        #contato {
-            background-color: #ffffff !important;
         }
 
         /* Texto dos Winchesters em negrito */
@@ -42,13 +29,12 @@
 
         /* Botão com fundo preto */
         .btn-primary {
-            background-color: #000000 !important;
-            border-color: #000000 !important;
+            background-color: #000000;
+            border-color: #000000;
         }
 
         /* Manter inputs/botões com fonte padrão */
-        .form-control,
-        .btn {
+        .form-control, .btn {
             font-family: system-ui, -apple-system, sans-serif;
         }
     </style>
@@ -87,5 +73,57 @@
             <h2 class="text-center pt-5">GALERIA</h2>
             <div class="container p-3 mt-3 fundo-galeria">
                 <div class="row justify-content-md-center">
-                    <div
+                    <div class="col-md-4">
+                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
+                            class="img-fluid mw-100 rounded-5" loading="lazy">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg"
+                            class="img-fluid mw-100 rounded-5" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container p-5 d-flex justify-content-center">
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
+                    <h2 class="mb-3">ENTRE EM CONTATO</h2>
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="nome">NOME</label>
+                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
+                                placeholder="DIGITE SEU NOME COMPLETO">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
+                                placeholder="DIGITE SEU EMAIL">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="mensagem">MENSAGEM</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
+                                placeholder="ESCREVA SUA MENSAGEM"></textarea>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">ENVIAR MENSAGEM</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-center p-3">
+        <p>ACESSE NOSSAS REDES:</p>
+        <i class="bi bi-whatsapp"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-tiktok"></i>
+        <p class="mt-3">DESENVOLVIDO POR WELINTON. PROJETO FICTÍCIO SEM FINS COMERCIAIS.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
 
