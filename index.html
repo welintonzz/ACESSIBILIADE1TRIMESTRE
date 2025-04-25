@@ -2,177 +2,147 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-    <title>Supernatural</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* CSS personalizado */
-        body {
-            font-family: 'Black Han Sans', sans-serif;
-            color: #000000;
-            font-size: 1rem;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supernatural</title>
 
-        /* Links e textos que estavam em laranja agora pretos */
-        .nav-link {
-            color: #000000 !important;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
 
-        /* Texto dos Winchesters em negrito */
-        #tropicalia p {
-            font-weight: bold;
-        }
+  <style>
+    /* Estilo dos botões de acessibilidade */
+    #acessibilidade-buttons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 9999;
+    }
 
-        /* Botão com fundo preto */
-        .btn-primary {
-            background-color: #000000;
-            border-color: #000000;
-        }
+    #acessibilidade-buttons .btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
 
-        /* Manter inputs/botões com fonte padrão */
-        .form-control, .btn {
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        /* Estilo dos botões de acessibilidade */
-        #acessibilidade-buttons {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 9999;
-        }
-
-        #acessibilidade-buttons .btn {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s;
-        }
-
-        #acessibilidade-buttons .btn:hover {
-            transform: scale(1.1);
-        }
-    </style>
+    #acessibilidade-buttons .btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Botões de Acessibilidade -->
-    <div id="acessibilidade-buttons">
-        <button onclick="alterarFonte(1)" class="btn">A+</button>
-        <button onclick="alterarFonte(-1)" class="btn">A-</button>
-    </div>
+  <!-- Botões Acessibilidade -->
+  <div id="acessibilidade-buttons">
+    <button onclick="alterarFonte(1)" class="btn">A+</button>
+    <button onclick="alterarFonte(-1)" class="btn">A-</button>
+  </div>
 
-    <header class="p-5">
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" alt="Logotipo da Tropicália" class="nav-img" loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="p-5">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <img src="img/logo.png" alt="Logotipo" class="nav-img" loading="lazy" style="height: 4rem;">
+      <ul class="nav mt-5">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="container my-5">
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <!-- Conteúdo removido -->
+  <main class="container my-5">
+    <section id="inicio" class="my-5">
+      <div class="inicio-fundo d-flex justify-content-between align-items-center">
+        <!-- Conteúdo da seção -->
+      </div>
+    </section>
+
+    <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
+      <div class="container d-flex align-items-center">
+        <div class="col-12 col-md-6">
+          <h2 class="text-center mb-4">QUEM SÃO OS WINCHESTERS?</h2>
+          <p class="p-2 text-center">A SÉRIE NARRA A HISTÓRIA DE DOIS IRMÃOS, SAM E DEAN WINCHESTER, INTERPRETADOS RESPECTIVAMENTE POR JARED PADALECKI E JENSEN ACKLES, QUE CAÇAM DEMÔNIOS, FANTASMAS, MONSTROS, VAMPIROS E OUTRAS CRIATURAS SOBRENATURAIS NO MUNDO.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="py-5">
+      <h2 class="text-center mb-5">GALERIA</h2>
+      <div class="container p-3 fundo-galeria">
+        <div class="row justify-content-md-center g-4">
+          <div class="col-md-5">
+            <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
+              class="img-fluid rounded-4" loading="lazy">
+          </div>
+          <div class="col-md-5">
+            <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg"
+              class="img-fluid rounded-4" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-5">
+      <div class="container p-5 d-flex justify-content-center">
+        <div class="col-md-8 col-lg-10 rounded-4 formulario">
+          <h2 class="mb-4 text-center">ENTRE EM CONTATO</h2>
+          <form>
+            <div class="form-group mb-4">
+              <label for="nome">NOME</label>
+              <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-2" placeholder="Digite seu nome completo">
             </div>
-        </section>
-
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
-            <div class="container d-flex align-items-center">
-                <div class="col-5">
-                    <h2>QUEM SÃO OS WINCHESTERS?</h2>
-                    <p class="p-2">A SÉRIE NARRA A HISTÓRIA DE DOIS IRMÃOS, SAM E DEAN WINCHESTER, INTERPRETADOS RESPECTIVAMENTE POR JARED PADALECKI E JENSEN ACKLES, QUE CAÇAM DEMÔNIOS, FANTASMAS, MONSTROS, VAMPIROS E OUTRAS CRIATURAS SOBRENATURAIS NO MUNDO.</p>
-                </div>
+            <div class="form-group mb-4">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" name="email" class="form-control rounded-3 mt-2" placeholder="Digite seu email">
             </div>
-        </section>
-
-        <section id="galeria">
-            <h2 class="text-center pt-5">GALERIA</h2>
-            <div class="container p-3 mt-3 fundo-galeria">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                            class="img-fluid mw-100 rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg"
-                            class="img-fluid mw-100 rounded-5" loading="lazy">
-                    </div>
-                </div>
+            <div class="form-group mb-4">
+              <label for="mensagem">MENSAGEM</label>
+              <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
+                placeholder="Escreva sua mensagem"></textarea>
             </div>
-        </section>
-
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario">
-                    <h2 class="mb-3">ENTRE EM CONTATO</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">NOME</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="DIGITE SEU NOME COMPLETO">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="DIGITE SEU EMAIL">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">MENSAGEM</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="ESCREVA SUA MENSAGEM"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">ENVIAR MENSAGEM</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill">ENVIAR MENSAGEM</button>
             </div>
-        </section>
-    </main>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer class="text-center p-3">
-        <p>ACESSE NOSSAS REDES:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">DESENVOLVIDO POR WELINTON. PROJETO FICTÍCIO SEM FINS COMERCIAIS.</p>
-    </footer>
+  <footer class="text-center p-4">
+    <p>ACESSE NOSSAS REDES:</p>
+    <i class="bi bi-whatsapp"></i>
+    <i class="bi bi-instagram"></i>
+    <i class="bi bi-tiktok"></i>
+    <p class="mt-4">DESENVOLVIDO POR WELINTON. PROJETO FICTÍCIO SEM FINS COMERCIAIS.</p>
+  </footer>
 
-    <!-- Script para alterar o tamanho da fonte -->
-    <script>
-        let tamanhoFonteAtual = 1; // Começa com 1rem
+  <script>
+    let tamanhoFonteAtual = 1;
 
-        function alterarFonte(variacao) {
-            tamanhoFonteAtual += variacao * 0.1;
-            if (tamanhoFonteAtual < 0.7) tamanhoFonteAtual = 0.7;
-            if (tamanhoFonteAtual > 2) tamanhoFonteAtual = 2;
-            document.body.style.fontSize = tamanhoFonteAtual + "rem";
-        }
-    </script>
+    function alterarFonte(variacao) {
+      tamanhoFonteAtual += variacao * 0.1;
+      if (tamanhoFonteAtual < 0.7) tamanhoFonteAtual = 0.7;
+      if (tamanhoFonteAtual > 2) tamanhoFonteAtual = 2;
+      document.documentElement.style.fontSize = tamanhoFonteAtual + "rem";
+    }
+  </script>
 
 </body>
 
 </html>
+
 
 
 
