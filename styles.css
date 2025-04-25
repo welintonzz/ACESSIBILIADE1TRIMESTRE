@@ -6,39 +6,36 @@
 }
 
 body {
-    font-size: 1rem;
-    font-family: 'Montserrat';
+    font-size: 1rem; /* Tamanho base para responder ao script */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
 }
 
 header {
     background-color: #ffffff;
 }
 
-
 section {
     padding-bottom: 5rem;
 }
 
-
 .nav-link {
     color: #CB6D43;
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .inicio-fundo {
-    /* aula 3 */
     background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
-    border-radius: 80px;
+    border-radius: 5rem;
     width: 100%;
-    height: 606px;
-    padding: 40px;
+    height: 38rem;
+    padding: 2.5rem;
     margin: 0 auto;
 }
 
-/* posicionamento para a imagem à direita */
 .img-inicio {
     position: absolute;
     right: 0;
@@ -47,7 +44,6 @@ section {
     height: auto;
 }
 
-
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
@@ -55,23 +51,19 @@ section {
     gap: 1rem;
 }
 
-
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
-
+    font-size: 1rem;
 }
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
-
 
 #tropicalia {
     position: relative;
@@ -79,9 +71,8 @@ section {
     margin-top: 3rem;
     margin-bottom: 3rem;
     background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
+                url('img/flor-esquerda.png') bottom left no-repeat;
+    background-size: 11rem 11rem;
 }
 
 #tropicalia .container {
@@ -90,53 +81,53 @@ section {
     justify-content: center;
     position: relative;
     z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
-
 
 h2 {
     font-family: 'Lemon', serif;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-style: normal;
     color: var(--laranja-claro);
+    text-align: center;
 }
 
 #galeria {
     background-color: #FAF4F4;
-
 }
 
 .fundo-galeria {
     background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
+    background-size: 11rem 11rem;
 }
 
 #contato {
     background-image: url('img/4965007.jpg');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
 }
 
 .formulario {
     background-color: #ffffff;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .formulario button {
     background-color: #CB6D43;
     border: none;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
-/* chama classe do bootstrap para modificar a cor */
 .form-control {
     background-color: #F1EDEF;
+    font-size: 1rem;
+}
+
+/* Pequena melhoria para imagens da galeria */
+.img-fluid {
+    object-fit: cover;
 }
