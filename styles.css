@@ -14,11 +14,9 @@ header {
     background-color: #ffffff;
 }
 
-
 section {
     padding-bottom: 5rem;
 }
-
 
 .nav-link {
     color: #CB6D43;
@@ -26,9 +24,7 @@ section {
 }
 
 .inicio-fundo {
-    /* aula 3 */
     background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
     border-radius: 80px;
@@ -36,6 +32,8 @@ section {
     height: 606px;
     padding: 40px;
     margin: 0 auto;
+    position: relative; /* ADICIONADO para permitir camada escura */
+    overflow: hidden;    /* ADICIONADO para não vazar a camada */
 }
 
 /* posicionamento para a imagem à direita */
@@ -47,7 +45,6 @@ section {
     height: auto;
 }
 
-
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
@@ -55,23 +52,18 @@ section {
     gap: 1rem;
 }
 
-
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
-
 }
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
-
 
 #tropicalia {
     position: relative;
@@ -79,9 +71,8 @@ section {
     margin-top: 3rem;
     margin-bottom: 3rem;
     background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
+                url('img/flor-esquerda.png') bottom left no-repeat;
     background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
 }
 
 #tropicalia .container {
@@ -90,9 +81,7 @@ section {
     justify-content: center;
     position: relative;
     z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
-
 
 h2 {
     font-family: 'Lemon', serif;
@@ -103,7 +92,6 @@ h2 {
 
 #galeria {
     background-color: #FAF4F4;
-
 }
 
 .fundo-galeria {
@@ -115,18 +103,15 @@ h2 {
     background-image: url('img/4965007.jpg');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
+    position: relative; /* ADICIONADO para camada escura */
+    overflow: hidden;    /* ADICIONADO para não vazar a camada */
 }
 
 .formulario {
     background-color: #ffffff;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
@@ -136,7 +121,28 @@ h2 {
     font-weight: bold;
 }
 
-/* chama classe do bootstrap para modificar a cor */
 .form-control {
     background-color: #F1EDEF;
 }
+
+/* === Camada escura para fundo de imagem no modo escuro === */
+.inicio-fundo::after,
+#contato::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* camada preta meio transparente */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    border-radius: 80px; /* igual ao radius da imagem */
+}
+
+body.modo-escuro .inicio-fundo::after,
+body.modo-escuro #contato::after {
+    opacity: 1; /* Ativa a camada escura quando modo escuro é ligado */
+}
+
